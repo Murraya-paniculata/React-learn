@@ -1,11 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
+import src1 from './assets/1.jpg';
+import src2 from './assets/2.jpg';
+import src3 from './assets/3.jpg';
 
-ReactDOM.render(
-  <h1>123</h1>,
-  document.getElementById('root')
-);
+let index = 0;
+const imgList = [src1, src2, src3];
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+const container = document.getElementById('root');
+
+let timer;
+function start () {
+  stop();
+  timer = setInterval(()=>{
+    index = (index+1)%3;
+    render();
+  }, 1000)
+}
+
+function render () {
+  ReactDOM.render(<img alt="图片" src={imgList[index]}></img>, container)
+}
+
+function stop () {
+  clearInterval(timer);
+}
+
+render();
+
+start();
+
+container.onmouseenter = function(){
+  console.log(1);
+  stop();
+}
+
+container.onmouseleave = function(){
+  console.log(0);
+  start();
+}
