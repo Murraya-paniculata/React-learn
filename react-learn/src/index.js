@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Daojishi from './components/Daojishi'
+import Ball from './components/Ball'
+
+const ballConfig = {
+  left: 100,
+  top: 100,
+  bg: '#000',
+  xSpeed: 500,
+  ySpeed: 500,
+}
 
 ReactDOM.render(
-  <Daojishi num = {10}/>,
+  <Ball ballConfig={ ballConfig }/>,
   document.getElementById('root')
 )
