@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Ball from './components/Ball'
-
-const ballConfig = {
-  left: 100,
-  top: 100,
-  bg: '#000',
-  xSpeed: 500,
-  ySpeed: 500,
-}
+import Pager from "./components/Pager"
 
 ReactDOM.render(
-  <Ball ballConfig={ ballConfig }/>,
+  <Pager
+    current={3}
+    total={100}
+    panelNumber={5}
+    limit={9}>
+  </Pager>,
   document.getElementById('root')
 )
