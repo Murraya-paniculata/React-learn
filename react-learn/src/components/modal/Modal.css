@@ -1,0 +1,17 @@
+.modalWarp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ddd;
+    height: 100%;
+}
+
+.modalWarp>p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #02d6dc;
+}
