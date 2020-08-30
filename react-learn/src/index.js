@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudentContainer from "./StudentContainer";
+import App from "./App";
+import './assets/base.css';
 
 ReactDOM.render(
-  <StudentContainer></StudentContainer>,
+  <App></App>,
   document.getElementById('root')
 )
